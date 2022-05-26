@@ -1,3 +1,5 @@
+
+
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -17,10 +19,13 @@ class _HomePageState extends State<HomePage> {
         
         backgroundColor: Colors.grey[100],
 
+        // Coluna principal
         body: Column(
           mainAxisAlignment: MainAxisAlignment.start,
 
           children: [
+
+            // Primeira linha
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 
@@ -41,7 +46,7 @@ class _HomePageState extends State<HomePage> {
                       color: Colors.purple),
                       ),
 
-                      Text("Ziraldo!",
+                      Text("Leone!",
                       style: TextStyle(fontFamily: 'Marker Felt',
                       fontSize: 50.0,
                       color: Colors.deepPurple[700]),
@@ -52,7 +57,66 @@ class _HomePageState extends State<HomePage> {
 
                 
               ],
-            )
+            ),
+
+            // Segunda linha
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
+              children: const [
+                Text("Parabéns! Esse mês você fez", 
+                style: TextStyle(fontFamily: 'Marker Felt',
+                fontSize: 16.0,
+                color: Colors.purple),
+                ),
+
+                Icon(Icons.visibility),
+              ],
+              ),
+
+              // Primeiro card
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 25.0),
+                child: Card(
+                
+                  
+
+                  child: SizedBox(
+                    width: 100,
+                    height: 70,
+
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+
+                      children: [
+                        ListTile(
+                          title: Icon(Icons.shop_2),
+                          subtitle: Text("  novos   pedidos"),),
+                      ],
+                    )
+                  ),
+                      ),
+
+                    // children: const [
+                  
+                    //  ListTile(
+                    //     title: Icon(Icons.shop_2),
+                    //   ),
+
+                    //  ListTile(
+                    //    title: Icon(Icons.people),
+                    //   ),
+
+                    //  ListTile(
+                    //     title: Icon(Icons.location_city_sharp),
+                    //   ),
+
+                      
+
+                  
+                  ),
+                // ),
+              
           ],
         ),
         
