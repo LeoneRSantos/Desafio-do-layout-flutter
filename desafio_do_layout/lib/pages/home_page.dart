@@ -12,6 +12,10 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
 
   int indexBottomNavigationBar = 0;
+  String num1 = "12";
+  String num2 = "20";
+  String num3 = "20";
+
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +25,7 @@ class _HomePageState extends State<HomePage> {
 
         // Coluna principal
         body: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 
           children: [
 
@@ -74,48 +78,89 @@ class _HomePageState extends State<HomePage> {
               ],
               ),
 
-              // Primeiro card
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 25.0),
-                child: Card(
+              // Linha com os números
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Text("$num1"),
+                  Text("$num2"),
+                  Text("$num3"),
+                ],
+              ),
                 
+              // Linha com pedidos, clientes e cidades
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    
+                // Primeiro card
+                Padding(
+                  padding: EdgeInsets.only(left: 7.0, right: 7.0),
+                  child: Card(
                   
+                    child: SizedBox(
+                      width: 90,
+                      height: 90,
 
-                  child: SizedBox(
-                    width: 100,
-                    height: 70,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
 
+                        children: const[
+                          ListTile(
+                            title: Icon(Icons.shop_2),
+                            subtitle: Text("novos pedidos", textAlign: TextAlign.center,)
+                          ),
+                        ],
+                      )
+                    ),
+                  ),
+                    
+                ),
+
+
+                // Segundo card
+                Padding(
+                  padding: EdgeInsets.only(left: 7.0, right: 7.0),
+                  
+                  child: 
+                  Card(
+                    child: SizedBox(width: 90, height: 90, 
                     child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-
                       children: [
                         ListTile(
-                          title: Icon(Icons.shop_2),
-                          subtitle: Text("  novos   pedidos"),),
+                          title: Icon(Icons.people),
+                          subtitle: Text("novos clientes", textAlign: TextAlign.center,),
+                        )
                       ],
-                    )
+                    ),),
                   ),
-                      ),
-
-                    // children: const [
                   
-                    //  ListTile(
-                    //     title: Icon(Icons.shop_2),
-                    //   ),
+                ),
 
-                    //  ListTile(
-                    //    title: Icon(Icons.people),
-                    //   ),
+                Padding(padding: EdgeInsets.only(left: 7.0, right: 7.0),
+                child: Card(
+                  child: SizedBox(width: 90, height: 90,
+                  child: ListTile(
+                    title: Icon(Icons.location_city_sharp),
+                    subtitle: Text("novas cidades", textAlign: TextAlign.center,),
+                  ),),
+                ),
+                ),
 
-                    //  ListTile(
-                    //     title: Icon(Icons.location_city_sharp),
-                    //   ),
+                  ],
+                ),
+          
+
+
+
+              // Terceiro card
+
+                   
 
                       
 
                   
-                  ),
-                // ),
+                
               
           ],
         ),
