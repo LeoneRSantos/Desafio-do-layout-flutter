@@ -78,91 +78,94 @@ class _HomePageState extends State<HomePage> {
               ],
               ),
 
-              // Linha com os números
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Text("$num1"),
-                  Text("$num2"),
-                  Text("$num3"),
-                ],
-              ),
                 
               // Linha com pedidos, clientes e cidades
-                Row(
+              Container(
+                color: Colors.amber,
+                height: 140,
+                margin: EdgeInsets.symmetric(horizontal: 15.0),
+                child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     
-                // Primeiro card
-                Padding(
-                  padding: EdgeInsets.only(left: 7.0, right: 7.0),
-                  child: Card(
-                  
-                    child: SizedBox(
-                      width: 90,
-                      height: 90,
-
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-
-                        children: const[
-                          ListTile(
-                            title: Icon(Icons.shop_2),
-                            subtitle: Text("novos pedidos", textAlign: TextAlign.center,)
-                          ),
-                        ],
-                      )
-                    ),
-                  ),
+                  // Primeiro card
+                  Column(
                     
-                ),
+                    children: [
+                      Text(num1),
+                      Padding(
+                        padding: EdgeInsets.only(left: 7.0, right: 7.0),
+                        child: Card(
+                        
+                          child: SizedBox(
+                            width: 90,
+                            height: 90,
 
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
 
-                // Segundo card
-                Padding(
-                  padding: EdgeInsets.only(left: 7.0, right: 7.0),
-                  
-                  child: 
-                  Card(
-                    child: SizedBox(width: 90, height: 90, 
-                    child: Column(
-                      children: [
-                        ListTile(
-                          title: Icon(Icons.people),
-                          subtitle: Text("novos clientes", textAlign: TextAlign.center,),
-                        )
-                      ],
-                    ),),
+                              children: const[
+                                ListTile(
+                                  title: Icon(Icons.shop_2),
+                                  subtitle: Text("novos pedidos", textAlign: TextAlign.center,)
+                                ),
+                              ],
+                            )
+                          ),
+                        ),
+                          
+                      ),
+                    ],
                   ),
-                  
-                ),
 
-                Padding(padding: EdgeInsets.only(left: 7.0, right: 7.0),
-                child: Card(
-                  child: SizedBox(width: 90, height: 90,
-                  child: ListTile(
-                    title: Icon(Icons.location_city_sharp),
-                    subtitle: Text("novas cidades", textAlign: TextAlign.center,),
-                  ),),
-                ),
-                ),
 
-                  ],
-                ),
+                  // Segundo card
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Text(num2),
+                      Padding(
+                        padding: EdgeInsets.only(left: 7.0, right: 7.0),
+                        
+                        child: 
+                        Card(
+                          child: SizedBox(width: 90, height: 90, 
+                          child: Column(
+                            children: [
+                              ListTile(
+                                title: Icon(Icons.people),
+                                subtitle: Text("novos clientes", textAlign: TextAlign.center,),
+                              )
+                            ],
+                          ),),
+                        ),
+                        
+                      ),
+                    ],
+                  ),
+
+                // Terceiro card
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Text(num3),
+                      Padding(padding: EdgeInsets.only(left: 7.0, right: 7.0),
+                      child: Card(
+                        child: SizedBox(width: 90, height: 90,
+                        child: ListTile(
+                          title: Icon(Icons.location_city_sharp),
+                          subtitle: Text("novas cidades", textAlign: TextAlign.center,),
+                        ),),
+                      ),
+                      ),
+                    ],
+                  ),
+
+                    ],
+                  ),
+              ),
           
-
-
-
-              // Terceiro card
-
-                   
-
-                      
-
-                  
-                
-              
-          ],
+      ],
         ),
         
         
