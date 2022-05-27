@@ -15,7 +15,7 @@ class SegundaLinha extends StatelessWidget {
                 color: Colors.purple),
                 ),
 
-                Icon(Icons.visibility),
+                Icon(Icons.visibility, size: 30.0,),
               ],
               );
   }
