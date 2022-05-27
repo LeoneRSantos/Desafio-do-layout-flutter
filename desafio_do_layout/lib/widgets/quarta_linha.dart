@@ -12,7 +12,7 @@ class QuartaLinha extends StatelessWidget {
     return Container(
         decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), color: Colors.grey[300]),
         height: 140,
-        margin: const EdgeInsets.symmetric(horizontal: 15.0),
+        margin: const EdgeInsets.symmetric(horizontal: 16.0),
 
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
