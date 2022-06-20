@@ -9,26 +9,20 @@ class QuartaLinha extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), color: Colors.grey[300]),
-        height: 140,
-        margin: const EdgeInsets.symmetric(horizontal: 18.0),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        Icon(Icons.shop_2, size: 55.0,),
 
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.end,
           children: [
-            Icon(Icons.shop_2, size: 55.0,),
-
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                Text("R\$ $valor", style: TextStyle(fontSize: 35.0),),
-                Text("em novos pedidos", textAlign: TextAlign.right, style: TextStyle(fontSize: 20.0),),
-              ],
-            )
+            Text("R\$ $valor", style: TextStyle(fontSize: 35.0),),
+            Text("em novos pedidos", textAlign: TextAlign.right, style: TextStyle(fontSize: 20.0),),
           ],
-        ),
+        )
+      ],
     );
   }
 }
