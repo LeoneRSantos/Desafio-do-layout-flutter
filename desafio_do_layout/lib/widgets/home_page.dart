@@ -1,6 +1,3 @@
-import 'package:bubble_bottom_bar/bubble_bottom_bar.dart';
-import 'package:desafio_do_layout/widgets/botao_quinta_linha.dart';
-import 'package:desafio_do_layout/widgets/cartao_padrao.dart';
 import 'package:desafio_do_layout/widgets/primeira_linha.dart';
 import 'package:desafio_do_layout/widgets/quarta_linha.dart';
 import 'package:desafio_do_layout/widgets/segunda_linha.dart';
@@ -30,16 +27,16 @@ class _HomePageState extends State<HomePage> {
 
           children: const[ 
 
-            // Primeira linha
-            PrimeiraLinha(),
-
-            // Segunda linha
-            SegundaLinha(),
-
-                
-            // Linha com pedidos, clientes e cidades
-            TerceiraLinha(),
-
+            children: [ 
+            
+              // Primeira linha
+              PrimeiraLinha(),
+            
+              // Segunda linha
+              SegundaLinha(),
+            
+                  
+              // Linha com pedidos, clientes e cidades
             // Quarta linha
             QuartaLinha(),
           
