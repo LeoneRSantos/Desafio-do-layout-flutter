@@ -1,3 +1,6 @@
+import 'package:bubble_bottom_bar/bubble_bottom_bar.dart';
+import 'package:desafio_do_layout/widgets/botao_quinta_linha.dart';
+import 'package:desafio_do_layout/widgets/cartao_padrao.dart';
 import 'package:desafio_do_layout/widgets/primeira_linha.dart';
 import 'package:desafio_do_layout/widgets/quarta_linha.dart';
 import 'package:desafio_do_layout/widgets/segunda_linha.dart';
@@ -63,7 +66,6 @@ class _HomePageState extends State<HomePage> {
         bottomNavigationBar: BubbleBottomBar(
         opacity: 1,
         currentIndex: indexBottomNavigationBar,
-
          onTap: (int index) {
             setState(() {
               indexBottomNavigationBar = index;
@@ -121,21 +123,12 @@ class _HomePageState extends State<HomePage> {
       
         // ),
         
-          BottomNavigationBarItem(
-          icon: Icon(Icons.shop_2, size: 30,),
-          label: ""),
         
         
       
         
-          BottomNavigationBarItem(
-          icon: Icon(Icons.auto_graph, size: 30,),
-          label: ""),
         
-          ]
         
-        ),
         
-        );
   }
 }
