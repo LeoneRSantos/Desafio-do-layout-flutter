@@ -82,29 +82,58 @@ class _HomePageState extends State<HomePage> {
             BubbleBottomBarItem(backgroundColor: Colors.deepPurple, icon: Icon(Icons.auto_graph_outlined, color: Colors.deepPurple,), activeIcon: Icon(Icons.auto_graph_outlined, color: Colors.grey.shade50,), title: Text("Estatísticas", style: TextStyle(color: Colors.grey.shade50)))
         ],
         
-
-          }, 
+        
+    ),
+    );
+        
+        // BottomNavigationBar(
+    
+        //   backgroundColor: Colors.grey[100],
+        //   type: BottomNavigationBarType.fixed,
+        //   currentIndex: indexBottomNavigationBar,
+    
+        //   onTap: (int index) {
+        //     setState(() {
+        //       indexBottomNavigationBar = index;
+        //     });
+    
+        //   }, 
           
-          items: const [
-
-          BottomNavigationBarItem(
-          icon: Icon(Icons.home, size: 30,),
-          label: ""),
-
+        //   items: const [
+    
+        //   BottomNavigationBarItem(
+        //   icon: Icon(Icons.home, size: 30,),
+        //   label: ""),
+    
+        //   BottomNavigationBarItem(
+        //   icon: Icon(Icons.shop_2, size: 30,),
+        //   label: ""),
+    
+        //   BottomNavigationBarItem(
+        //   icon: Icon(Icons.people, size: 30,),
+        //   label: ""),
+    
+        //   BottomNavigationBarItem(
+        //   icon: Icon(Icons.auto_graph, size: 30,),
+        //   label: ""),
+    
+        //   ]
+      
+        // ),
+        
           BottomNavigationBarItem(
           icon: Icon(Icons.shop_2, size: 30,),
           label: ""),
-
-          BottomNavigationBarItem(
-          icon: Icon(Icons.people, size: 30,),
-          label: ""),
-
+        
+        
+      
+        
           BottomNavigationBarItem(
           icon: Icon(Icons.auto_graph, size: 30,),
           label: ""),
-
+        
           ]
-      
+        
         ),
         
         );
