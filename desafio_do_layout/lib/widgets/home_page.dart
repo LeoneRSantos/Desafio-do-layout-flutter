@@ -37,7 +37,19 @@ class _HomePageState extends State<HomePage> {
             
                   
               // Linha com pedidos, clientes e cidades
-            // Quarta linha
+              // TerceiraLinha(),
+              CartaoPadrao(conteudo: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  TerceiraLinha(icone: Icons.shop_2, texto: 'novos pedidos',),
+                  TerceiraLinha(icone: Icons.people, texto: 'novos clientes'),
+                  TerceiraLinha(icone: Icons.location_city, texto: 'novas cidades'),
+                ],
+              )
+              ),
+              
+            
+              // Quarta linha
             QuartaLinha(),
           
           ],
