@@ -68,6 +68,20 @@ class _HomePageState extends State<HomePage> {
             setState(() {
               indexBottomNavigationBar = index;
             });
+          },
+        borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
+        elevation: 8,
+        fabLocation: BubbleBottomBarFabLocation.end, //new
+        hasNotch: true, //new
+        hasInk: true, //new, gives a cute ink effect
+        inkColor: Colors.black12, //optional, uses theme color if not specified
+        items: <BubbleBottomBarItem>[
+            BubbleBottomBarItem(backgroundColor: Colors.deepPurple, icon: Icon(Icons.home, color: Colors.deepPurple,), activeIcon: Icon(Icons.home, color: Colors.grey.shade50,), title: Text("Home", style: TextStyle(color: Colors.grey.shade50),)),
+            BubbleBottomBarItem(backgroundColor: Colors.deepPurple, icon: Icon(Icons.shop_2, color: Colors.deepPurple,), activeIcon: Icon(Icons.shop_2, color: Colors.grey.shade50,), title: Text("Pedidos", style: TextStyle(color: Colors.grey.shade50))),
+            BubbleBottomBarItem(backgroundColor: Colors.deepPurple, icon: Icon(Icons.people, color: Colors.deepPurple,), activeIcon: Icon(Icons.people, color: Colors.grey.shade50,), title: Text("Clientes", style: TextStyle(color: Colors.grey.shade50))),
+            BubbleBottomBarItem(backgroundColor: Colors.deepPurple, icon: Icon(Icons.auto_graph_outlined, color: Colors.deepPurple,), activeIcon: Icon(Icons.auto_graph_outlined, color: Colors.grey.shade50,), title: Text("Estatísticas", style: TextStyle(color: Colors.grey.shade50)))
+        ],
+        
 
           }, 
           
