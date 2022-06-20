@@ -50,10 +50,13 @@ class _HomePageState extends State<HomePage> {
               
             
               // Quarta linha
-            QuartaLinha(),
-          
-          ],
-        ),
+              CartaoPadrao(conteudo: QuartaLinha()),
+
+              // Botão
+              BotaoQuintaLinha(),
+            
+            ],
+          ),
         
         
         bottomNavigationBar: BottomNavigationBar(
