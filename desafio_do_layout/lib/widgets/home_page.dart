@@ -57,15 +57,14 @@ class _HomePageState extends State<HomePage> {
             
             ],
           ),
+        ),
         
         
-        bottomNavigationBar: BottomNavigationBar(
+        bottomNavigationBar: BubbleBottomBar(
+        opacity: 1,
+        currentIndex: indexBottomNavigationBar,
 
-          backgroundColor: Colors.grey[100],
-          type: BottomNavigationBarType.fixed,
-          currentIndex: indexBottomNavigationBar,
-
-          onTap: (int index) {
+         onTap: (int index) {
             setState(() {
               indexBottomNavigationBar = index;
             });
