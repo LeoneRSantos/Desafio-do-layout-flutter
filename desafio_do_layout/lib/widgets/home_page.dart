@@ -20,13 +20,13 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
         
         backgroundColor: Colors.grey[200],
-
+    
         // Coluna principal
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-
-          children: const[ 
-
+        body: SafeArea(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            
             children: [ 
             
               // Primeira linha
