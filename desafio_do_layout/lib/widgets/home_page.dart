@@ -18,6 +18,22 @@ class _HomePageState extends State<HomePage> {
 
   int indexBottomNavigationBar = 0;
 
+  void _showAction(BuildContext context, int index) {
+    showDialog<void>(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.of(context).pop(),
+              child: const Text('CLOSE'),
+            ),
+          ],
+        );
+      },
+    );
+  }
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,13 +72,30 @@ class _HomePageState extends State<HomePage> {
               CartaoPadrao(conteudo: QuartaLinha()),
 
               // Botão
-              BotaoQuintaLinha(),
+              // BotaoQuintaLinha(),
+              Expanded(child: Container()),
             
             ],
           ),
         ),
         
-        
+        floatingActionButton: ExpandableFab(
+        distance: 112.0,
+        children: [
+          ActionButton(
+            onPressed: () => _showAction(context, 0),
+            icon: const Icon(Icons.format_size),
+          ),
+          ActionButton(
+            onPressed: () => _showAction(context, 1),
+            icon: const Icon(Icons.insert_photo),
+          ),
+          ActionButton(
+            onPressed: () => _showAction(context, 2),
+            icon: const Icon(Icons.videocam),
+          ),
+        ],
+      ),        
         bottomNavigationBar: BubbleBottomBar(
         opacity: 1,
         currentIndex: indexBottomNavigationBar,
@@ -81,54 +114,13 @@ class _HomePageState extends State<HomePage> {
             BubbleBottomBarItem(backgroundColor: Colors.deepPurple, icon: Icon(Icons.home, color: Colors.deepPurple,), activeIcon: Icon(Icons.home, color: Colors.grey.shade50,), title: Text("Home", style: TextStyle(color: Colors.grey.shade50),)),
             BubbleBottomBarItem(backgroundColor: Colors.deepPurple, icon: Icon(Icons.shop_2, color: Colors.deepPurple,), activeIcon: Icon(Icons.shop_2, color: Colors.grey.shade50,), title: Text("Pedidos", style: TextStyle(color: Colors.grey.shade50))),
             BubbleBottomBarItem(backgroundColor: Colors.deepPurple, icon: Icon(Icons.people, color: Colors.deepPurple,), activeIcon: Icon(Icons.people, color: Colors.grey.shade50,), title: Text("Clientes", style: TextStyle(color: Colors.grey.shade50))),
-            BubbleBottomBarItem(backgroundColor: Colors.deepPurple, icon: Icon(Icons.auto_graph_outlined, color: Colors.deepPurple,), activeIcon: Icon(Icons.auto_graph_outlined, color: Colors.grey.shade50,), title: Text("Estatísticas", style: TextStyle(color: Colors.grey.shade50)))
+            BubbleBottomBarItem(backgroundColor: Colors.deepPurple, icon: Icon(Icons.show_chart, color: Colors.deepPurple,), activeIcon: Icon(Icons.show_chart, color: Colors.grey.shade50,), title: Text("Estatísticas", style: TextStyle(color: Colors.grey.shade50)))
         ],
         
         
     ),
+    
     );
-        
-        // BottomNavigationBar(
-    
-        //   backgroundColor: Colors.grey[100],
-        //   type: BottomNavigationBarType.fixed,
-        //   currentIndex: indexBottomNavigationBar,
-    
-        //   onTap: (int index) {
-        //     setState(() {
-        //       indexBottomNavigationBar = index;
-        //     });
-    
-        //   }, 
-          
-        //   items: const [
-    
-        //   BottomNavigationBarItem(
-        //   icon: Icon(Icons.home, size: 30,),
-        //   label: ""),
-    
-        //   BottomNavigationBarItem(
-        //   icon: Icon(Icons.shop_2, size: 30,),
-        //   label: ""),
-    
-        //   BottomNavigationBarItem(
-        //   icon: Icon(Icons.people, size: 30,),
-        //   label: ""),
-    
-        //   BottomNavigationBarItem(
-        //   icon: Icon(Icons.auto_graph, size: 30,),
-        //   label: ""),
-    
-        //   ]
-      
-        // ),
-        
-        
-        
-      
-        
-        
-        
         
   }
 }
