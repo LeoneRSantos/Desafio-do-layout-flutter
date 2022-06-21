@@ -227,7 +227,6 @@ class FakeItem extends StatelessWidget {
         borderRadius: const BorderRadius.all(Radius.circular(8.0)),
         color: Colors.grey.shade300,
       ),
-      ],
     );
   }
 }
