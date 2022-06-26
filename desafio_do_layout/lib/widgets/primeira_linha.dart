@@ -1,7 +1,12 @@
+import 'package:desafio_do_layout/widgets/textos.dart';
 import 'package:flutter/material.dart';
 
+import '../cores.dart';
+
 class PrimeiraLinha extends StatelessWidget {
-  const PrimeiraLinha({Key? key}) : super(key: key);
+  PrimeiraLinha({Key? key}) : super(key: key);
+
+  late Cores c = Cores();
 
   @override
   Widget build(BuildContext context) {
@@ -19,17 +24,10 @@ class PrimeiraLinha extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.end,
 
                     children: [
-                      const Text("Olá,",
-                      style: TextStyle(fontFamily: 'Marker Felt',
-                      fontSize: 16.0, 
-                      color: Colors.purple),
-                      ),
 
-                      Text("Leone!",
-                      style: TextStyle(fontFamily: 'Marker Felt',
-                      fontSize: 50.0,
-                      color: Colors.deepPurple[700]),
-                      ),
+                      Textos(texto: 'Olá', tamanho: 16.0, cor: c.obterSecundario(),),
+
+                      Textos(texto: 'Leone!', tamanho: 50.0, cor: c.obterPrincipal()),
                     ],
 
                   ),
