@@ -1,14 +1,14 @@
+import 'package:desafio_do_layout/cores.dart';
 import 'package:flutter/material.dart';
 
 class TerceiraLinha extends StatelessWidget {
-  const TerceiraLinha({Key? key, required this.icone, required this.texto}) : super(key: key);
+  TerceiraLinha({Key? key, required this.icone, required this.texto, required this.numero}) : super(key: key);
 
-  final String num1 = "12";
-  final String num2 = "20";
-  final String num3 = "20";
-
+  final String numero;
   final IconData icone;
   final String texto;
+ 
+  late Cores c = Cores();
   
 
   @override
@@ -33,12 +33,16 @@ class TerceiraLinha extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
               
                 children: [
-                  Text(num1,),
-                  ListTile(
-                    title: Icon(icone, size: 45.0, color: Colors.deepPurple,),
-                    subtitle: Text(texto, textAlign: TextAlign.center, style: TextStyle(color: Colors.purple),)
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20.0),
+                    child: Text(numero, style: TextStyle(fontFamily: 'Concert One', fontSize: 14.0, color: c.obterTerceario()),),
                   ),
-                ],
+                  ListTile(
+                    title: Icon(icone, size: 45.0, color: c.obterPrincipal()),
+                    subtitle: Text(texto, textAlign: TextAlign.center, 
+                    style: TextStyle(color: c.obterSecundario(), fontFamily: 'Marker Felt', fontSize: 16.0),
+                  ),
+              )],
               ),
             ),
           ),
