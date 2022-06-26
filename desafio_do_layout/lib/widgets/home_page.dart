@@ -60,9 +60,9 @@ class _HomePageState extends State<HomePage> {
               CartaoPadrao(conteudo: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  TerceiraLinha(icone: Icons.shop_2, texto: 'novos pedidos',),
-                  TerceiraLinha(icone: Icons.people, texto: 'novos clientes'),
-                  TerceiraLinha(icone: Icons.location_city, texto: 'novas cidades'),
+                  TerceiraLinha(icone: Icons.shop_2, texto: 'novos \npedidos', numero: '12',),
+                  TerceiraLinha(icone: Icons.people, texto: 'novos \nclientes', numero: '20',),
+                  TerceiraLinha(icone: Icons.location_city, texto: 'novas \ncidades', numero: '20',),
                 ],
               )
               ),
