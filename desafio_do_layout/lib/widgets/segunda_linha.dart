@@ -1,21 +1,21 @@
+import 'package:desafio_do_layout/cores.dart';
+import 'package:desafio_do_layout/widgets/textos.dart';
 import 'package:flutter/material.dart';
 
 class SegundaLinha extends StatelessWidget {
-  const SegundaLinha({Key? key}) : super(key: key);
+  SegundaLinha({Key? key}) : super(key: key);
+
+ late Cores c =Cores();
 
   @override
   Widget build(BuildContext context) {
     return Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 
-              children: const [
-                Text("Parabéns! Esse mês você fez", 
-                style: TextStyle(fontFamily: 'Marker Felt',
-                fontSize: 16.0,
-                color: Colors.purple),
-                ),
+              children: [
+                Textos(texto: 'Parabéns! Esse mês você fez', tamanho: 16.0, cor: c.obterSecundario()),
 
-                Icon(Icons.visibility, size: 30.0,),
+                Icon(Icons.visibility, size: 30.0, color: c.obterTerceario()),
               ],
               );
   }
