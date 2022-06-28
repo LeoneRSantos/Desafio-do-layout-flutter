@@ -5,9 +5,9 @@ import 'package:desafio_do_layout/widgets/textos.dart';
 import 'package:flutter/material.dart';
 
 class QuartaLinha extends StatelessWidget {
-  QuartaLinha({Key? key}) : super(key: key);
+  QuartaLinha({Key? key, required this.valor}) : super(key: key);
 
-  final String valor = "34.000,00";
+  final String valor;
   late Cores c = Cores();
 
   @override
