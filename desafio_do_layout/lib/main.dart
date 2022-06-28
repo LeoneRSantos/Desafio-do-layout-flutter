@@ -15,7 +15,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor: Colors.grey[100],
+        brightness: Brightness.light,
+        scaffoldBackgroundColor: Color(0xFFe6e6e6),
+        fontFamily: 'Marker Felt',
+        primaryColor: Color(0xFF4f426f),
+        accentColor: Color(0xFF262457), 
       ),
       
       home: const HomePage(),
