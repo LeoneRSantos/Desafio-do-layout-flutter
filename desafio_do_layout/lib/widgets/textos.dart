@@ -9,7 +9,7 @@ class Textos extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    return Text(texto, 
-    style: TextStyle(fontSize: tamanho, fontFamily: 'Marker Felt', color: cor),);
+    return Text(texto, textAlign: TextAlign.center,
+    style: TextStyle(fontSize: tamanho, color: cor),);
   }
 }
