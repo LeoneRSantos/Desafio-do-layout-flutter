@@ -87,7 +87,7 @@ class _ExpandableFabState extends State<ExpandableFab>
               padding: const EdgeInsets.all(8.0),
               child: Icon(
                 Icons.close,
-                color: Colors.deepPurple,
+                color: Color(0xFF4f426f),
               ),
             ),
           ),
@@ -133,7 +133,7 @@ class _ExpandableFabState extends State<ExpandableFab>
           duration: const Duration(milliseconds: 250),
           child: FloatingActionButton(
             onPressed: _toggle,
-            child: const Icon(Icons.add),
+            child: const Icon(Icons.add, size: 40.0,),
           ),
         ),
       ),
@@ -194,16 +194,16 @@ class ActionButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
+    final theme = Theme.of(context).primaryColor;
     return Material(
       shape: const CircleBorder(),
       clipBehavior: Clip.antiAlias,
-      color: Colors.deepPurple,
+      color: theme,
       elevation: 4.0,
       child: IconButton(
         onPressed: onPressed,
         icon: icon,
-        color: Colors.white,
+        color: Theme.of(context).scaffoldBackgroundColor,
       ),
     );
   }
@@ -225,7 +225,7 @@ class FakeItem extends StatelessWidget {
       height: isBig ? 128.0 : 36.0,
       decoration: BoxDecoration(
         borderRadius: const BorderRadius.all(Radius.circular(8.0)),
-        color: Colors.grey.shade300,
+        
       ),
     );
   }
