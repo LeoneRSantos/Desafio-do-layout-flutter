@@ -3,9 +3,11 @@ import 'package:desafio_do_layout/widgets/textos.dart';
 import 'package:flutter/material.dart';
 
 class SegundaLinha extends StatefulWidget {
-  SegundaLinha({Key? key, required this.alterarValores,}) : super(key: key);
+  SegundaLinha({Key? key, required this.alterarValores, required this.icone}) : super(key: key);
 
   late void Function() alterarValores;
+  final IconData icone;
+  
 
   @override
   State<SegundaLinha> createState() => _SegundaLinhaState();
@@ -22,7 +24,10 @@ class _SegundaLinhaState extends State<SegundaLinha> {
       children: [
         Textos(texto: 'Parabéns! Esse mês você fez', tamanho: 16.0, cor: c.obterSecundario()),
 
-        Icon(Icons.visibility, size: 30.0, color: Theme.of(context).primaryColor),
+        
+        TextButton(onPressed: widget.alterarValores,
+        
+        child: Icon(widget.icone, size: 30.0, color: Theme.of(context).primaryColor)),
       ],
       );
   }
