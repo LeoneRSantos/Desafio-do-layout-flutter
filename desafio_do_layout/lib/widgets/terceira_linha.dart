@@ -23,33 +23,22 @@ class _TerceiraLinhaState extends State<TerceiraLinha> {
       
       children: [
         
-      // Primeiro card
-      Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.end,
+
+      SizedBox(width: 110, height: 110,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.end,
         
-        children: [
-          
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: SizedBox(width: 110, height: 110,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.end,
-              
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 20.0),
-                    child: Text(widget.numero, style: TextStyle(fontFamily: 'Concert One', fontSize: 14.0, color: c.obterTerceario()),),
-                  ),
-                  ListTile(
-                    title: Icon(widget.icone, size: 45.0, color: c.obterPrincipal()),
-                    subtitle: Textos(texto: widget.texto, tamanho: 16.0, cor: Colors.purple),
-              )],
-              ),
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(left: 20.0),
+              child: Text(widget.numero, style: TextStyle(fontFamily: 'Concert One', fontSize: 14.0, color: c.obterTerceario()),),
             ),
-          ),
-        ],
+            ListTile(
+              title: Icon(widget.icone, size: 40.0, color: c.obterPrincipal()),
+              subtitle: Textos(texto: widget.texto, tamanho: 16.0, cor: Colors.purple),
+        )],
+        ),
       ),
   
     ]  
