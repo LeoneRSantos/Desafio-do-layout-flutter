@@ -11,29 +11,29 @@ class PrimeiraLinha extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 
-              children: [
-                const CircleAvatar(
-                  backgroundImage:AssetImage('images/Perfil2.jpg'),
-                  radius: 50.0,
-                ),
+      children: [
+        const CircleAvatar(
+          backgroundImage:AssetImage('images/Perfil2.jpg'),
+          radius: 50.0,
+        ),
 
-                
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.end,
+        
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.end,
 
-                    children: [
+            children: [
 
-                      Textos(texto: 'Olá', tamanho: 16.0, cor: c.obterSecundario(),),
+              Textos(texto: 'Olá', tamanho: 16.0, cor: c.obterSecundario(),),
 
-                      Textos(texto: 'Leone!', tamanho: 50.0, cor: c.obterPrincipal()),
-                    ],
+              Textos(texto: 'Leone!', tamanho: 50.0, cor: c.obterPrincipal()),
+            ],
 
-                  ),
+          ),
 
-                
-              ],
-            );
+        
+      ],
+    );
   }
 }
