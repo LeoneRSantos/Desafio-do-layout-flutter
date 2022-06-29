@@ -18,21 +18,22 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
 
   int indexBottomNavigationBar = 0;
-  String pedidos = '12';
-  String clientes = '20';
-  String cidades = '20';
-  String novosPedidos = '34.000,00';
+  String _pedidos = '12';
+  String _clientes = '20';
+  String _cidades = '20';
+  String _novosPedidos = '34.000,00';
+  IconData _visibilidade = Icons.visibility;
 
   void esconder(){
-
     setState(() {
-      Icon(Icons.visibility_off);
-      String pedidos = '*';
-      String clientes = '*';
-      String cidades = '*';
-      String novosPedidos = '_, __';
+      _pedidos = '*';
+      _clientes = '*';
+      _cidades = '*';
+      _novosPedidos = '_, __';
+      _visibilidade = Icons.visibility_off;
+    
     });
-
+    debugPrint('Função esconder');
   }
 
   
@@ -60,16 +61,19 @@ class _HomePageState extends State<HomePage> {
       // Coluna principal
       body: SafeArea(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           
           children: [ 
           
             // Primeira linha
-            PrimeiraLinha(),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 20.0),
+              child: PrimeiraLinha(),
+            ),
           
             // Segunda linha
-            SegundaLinha(alterarValores: esconder,),
+            SegundaLinha(alterarValores: esconder, icone: _visibilidade,),
           
                 
             // Linha com pedidos, clientes e cidades
@@ -77,20 +81,18 @@ class _HomePageState extends State<HomePage> {
             CartaoPadrao(conteudo: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                TerceiraLinha(icone: Icons.shop_2, texto: 'novos \npedidos', numero: pedidos,),
-                TerceiraLinha(icone: Icons.people, texto: 'novos \nclientes', numero: clientes,),
-                TerceiraLinha(icone: Icons.location_city, texto: 'novas \ncidades', numero: cidades,),
+                TerceiraLinha(icone: Icons.shop_2, texto: 'novos \npedidos', numero: _pedidos,),
+                TerceiraLinha(icone: Icons.people, texto: 'novos \nclientes', numero: _clientes,),
+                TerceiraLinha(icone: Icons.location_city, texto: 'novas \ncidades', numero: _cidades,),
               ],
             )
             ),
             
           
             // Quarta linha
-            CartaoPadrao(conteudo: QuartaLinha(valor: novosPedidos,)),
+            CartaoPadrao(conteudo: QuartaLinha(valor: _novosPedidos,)),
 
-            // Botão
-            // BotaoQuintaLinha(),
-            Expanded(child: Container()),
+            Expanded(child: Container(height: 110.0,)),
           
           ],
         ),
