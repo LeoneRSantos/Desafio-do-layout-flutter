@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'widgets/home_page.dart';
+import 'pages/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Color(0xFFe6e6e6),
         fontFamily: 'Marker Felt',
         primaryColor: Color(0xFF4f426f),
-        accentColor: Color(0xFF262457), 
+        accentColor: Color(0xFF262457),
       ),
       
       home: const HomePage(),
