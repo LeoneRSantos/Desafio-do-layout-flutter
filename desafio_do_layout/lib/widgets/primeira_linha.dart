@@ -25,9 +25,9 @@ class PrimeiraLinha extends StatelessWidget {
 
             children: [
 
-              Textos(texto: 'Olá', tamanho: 16.0, cor: c.obterSecundario(),),
+              Textos(texto: 'Olá', tamanho: 16.0, cor: Theme.of(context).colorScheme.secondary),
 
-              Textos(texto: 'Leone!', tamanho: 50.0, cor: c.obterPrincipal()),
+              Textos(texto: 'Leone!', tamanho: 50.0, cor: Theme.of(context).colorScheme.primary),
             ],
 
           ),
