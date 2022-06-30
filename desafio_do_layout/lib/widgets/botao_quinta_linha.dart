@@ -87,7 +87,7 @@ class _ExpandableFabState extends State<ExpandableFab>
               padding: const EdgeInsets.all(8.0),
               child: Icon(
                 Icons.close,
-                color: Color(0xFF4f426f),
+                color: Theme.of(context).colorScheme.tertiary,
               ),
             ),
           ),
