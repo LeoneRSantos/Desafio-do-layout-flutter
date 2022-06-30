@@ -22,12 +22,12 @@ class _SegundaLinhaState extends State<SegundaLinha> {
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 
       children: [
-        Textos(texto: 'Parabéns! Esse mês você fez', tamanho: 16.0, cor: c.obterSecundario()),
+        Textos(texto: 'Parabéns! Esse mês você fez', tamanho: 16.0, cor: Theme.of(context).colorScheme.secondary),
 
         
         TextButton(onPressed: widget.alterarValores,
         
-        child: Icon(widget.icone, size: 30.0, color: Theme.of(context).primaryColor)),
+        child: Icon(widget.icone, size: 30.0, color: Theme.of(context).colorScheme.tertiary)),
       ],
       );
   }
