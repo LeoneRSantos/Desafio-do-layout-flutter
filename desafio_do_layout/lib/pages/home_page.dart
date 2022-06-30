@@ -103,15 +103,15 @@ class _HomePageState extends State<HomePage> {
       children: [
         ActionButton(
           onPressed: () => _showAction(context, 0),
-          icon: const Icon(Icons.format_size),
+          icon: const Icon(Icons.person_add),
         ),
         ActionButton(
           onPressed: () => _showAction(context, 1),
-          icon: const Icon(Icons.insert_photo),
+          icon: const Icon(Icons.add_shopping_cart),
         ),
         ActionButton(
           onPressed: () => _showAction(context, 2),
-          icon: const Icon(Icons.videocam),
+          icon: const Icon(Icons.person_add),
         ),
       ],
     ),        
