@@ -24,7 +24,7 @@ class _TerceiraLinhaState extends State<TerceiraLinha> {
       children: [
         
 
-      SizedBox(width: 110, height: 110,
+      SizedBox(width: 120, height: 140,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.end,
