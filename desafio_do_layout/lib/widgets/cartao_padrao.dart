@@ -10,7 +10,7 @@ class CartaoPadrao extends StatelessWidget {
     return Expanded(child: Padding(
       padding: const EdgeInsets.all(10.0),
       child: Container(  
-        decoration: BoxDecoration(borderRadius: BorderRadius.circular(20.0), color: Color(0xFFd7d3e2),),
+        decoration: BoxDecoration(borderRadius: BorderRadius.circular(20.0), color: Theme.of(context).colorScheme.surface,),
         child: conteudo,
       ),
     )
