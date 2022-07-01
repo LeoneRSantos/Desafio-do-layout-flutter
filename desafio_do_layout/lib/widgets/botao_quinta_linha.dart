@@ -78,6 +78,7 @@ class _ExpandableFabState extends State<ExpandableFab>
       height: 56.0,
       child: Center(
         child: Material(
+          color: Theme.of(context).colorScheme.primary,
           shape: const CircleBorder(),
           clipBehavior: Clip.antiAlias,
           elevation: 4.0,
@@ -86,8 +87,8 @@ class _ExpandableFabState extends State<ExpandableFab>
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Icon(
-                Icons.close,
-                color: Theme.of(context).colorScheme.tertiary,
+                Icons.add,
+                color: Theme.of(context).scaffoldBackgroundColor,
               ),
             ),
           ),
@@ -132,6 +133,7 @@ class _ExpandableFabState extends State<ExpandableFab>
           curve: const Interval(0.25, 1.0, curve: Curves.easeInOut),
           duration: const Duration(milliseconds: 250),
           child: FloatingActionButton(
+            backgroundColor: Theme.of(context).colorScheme.primary,
             onPressed: _toggle,
             child: const Icon(Icons.add, size: 40.0,),
           ),
@@ -194,7 +196,7 @@ class ActionButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context).primaryColor;
+    final theme = Theme.of(context).colorScheme.tertiary;
     return Material(
       shape: const CircleBorder(),
       clipBehavior: Clip.antiAlias,
