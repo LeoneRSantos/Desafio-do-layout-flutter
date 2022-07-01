@@ -56,6 +56,13 @@ class _HomePageState extends State<HomePage> {
   
   @override
   Widget build(BuildContext context) {
+
+    // Cores a serem usadas no BubbleBottomBarItem
+    Color corPrincipal = Theme.of(context).colorScheme.primary;
+    Color corTerciaria = Theme.of(context).colorScheme.tertiary;
+    Color corPreenchimento = Theme.of(context).scaffoldBackgroundColor;
+
+
     return Scaffold(
     
       // Coluna principal
@@ -130,10 +137,10 @@ class _HomePageState extends State<HomePage> {
       hasInk: true, //new, gives a cute ink effect
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       items: <BubbleBottomBarItem>[
-          BubbleBottomBarItem(backgroundColor: Color(0xFF262457), icon: Icon(Icons.home, color: Color(0xFF4f426f),), activeIcon: Icon(Icons.home, color: Color(0xFFe6e6e6)), title: Textos(texto: 'Home', tamanho: 14.0, cor: Color(0xFFe6e6e6))),
-          BubbleBottomBarItem(backgroundColor: Color(0xFF262457), icon: Icon(Icons.shop_2, color: Color(0xFF4f426f),), activeIcon: Icon(Icons.shop_2, color: Color(0xFFe6e6e6)), title: Textos(texto: 'Pedidos', tamanho: 14.0, cor: Color(0xFFe6e6e6))),
-          BubbleBottomBarItem(backgroundColor: Color(0xFF262457), icon: Icon(Icons.people, color: Color(0xFF4f426f),), activeIcon: Icon(Icons.people, color: Color(0xFFe6e6e6),), title: Textos(texto: 'Clientes', tamanho: 14.0, cor: Color(0xFFe6e6e6))),
-          BubbleBottomBarItem(backgroundColor: Color(0xFF262457), icon: Icon(Icons.show_chart, color: Color(0xFF4f426f),), activeIcon: Icon(Icons.show_chart, color: Color(0xFFe6e6e6),), title: Textos(texto: 'Estatísticas', tamanho: 14.0, cor: Color(0xFFe6e6e6))),
+          BubbleBottomBarItem(backgroundColor: corPrincipal, icon: Icon(Icons.home, color: corTerciaria,), activeIcon: Icon(Icons.home, color: corPreenchimento), title: Textos(texto: 'Home', tamanho: 14.0, cor: corPreenchimento)),
+          BubbleBottomBarItem(backgroundColor: corPrincipal, icon: Icon(Icons.shop_2, color: corTerciaria,), activeIcon: Icon(Icons.shop_2, color: corPreenchimento), title: Textos(texto: 'Pedidos', tamanho: 14.0, cor: corPreenchimento)),
+          BubbleBottomBarItem(backgroundColor: corPrincipal, icon: Icon(Icons.people, color: corTerciaria,), activeIcon: Icon(Icons.people, color: corPreenchimento,), title: Textos(texto: 'Clientes', tamanho: 14.0, cor: corPreenchimento)),
+          BubbleBottomBarItem(backgroundColor: corPrincipal, icon: Icon(Icons.show_chart, color: corTerciaria,), activeIcon: Icon(Icons.show_chart, color: corPreenchimento,), title: Textos(texto: 'Estatísticas', tamanho: 14.0, cor: corPreenchimento)),
       ],
       
       
