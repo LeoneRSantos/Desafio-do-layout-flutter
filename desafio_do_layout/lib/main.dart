@@ -14,7 +14,8 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
- late ThemeData tema = temaEscuro;
+ late ThemeData tema = temaClaro;
+ late IconData iconeTema = Icons.light_mode; 
   
 
  ThemeData definirTema(){
@@ -26,7 +27,7 @@ class _MyAppState extends State<MyApp> {
 
     if (tema.colorScheme.brightness == Brightness.dark) {
       setState(() {
-      Icon(Icons.light_mode);
+      iconeTema = Icons.light_mode;
       tema = temaClaro;
         debugPrint('Tema Claro');
       });
@@ -35,7 +36,7 @@ class _MyAppState extends State<MyApp> {
 
     else if (tema.colorScheme.brightness == Brightness.light){
       setState(() {
-      Icon(Icons.dark_mode); 
+      iconeTema = Icons.dark_mode;
       tema = temaEscuro;
       debugPrint('Tema escuro');
       });
@@ -77,7 +78,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       theme: definirTema(),
       
-      home: HomePage(alterarTema: selecionarTema,),
+      home: HomePage(alterarTema: selecionarTema, iconeTemaAtual: iconeTema,),
       );
   }
 }
