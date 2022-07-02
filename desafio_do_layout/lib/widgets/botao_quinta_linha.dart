@@ -1,3 +1,4 @@
+import 'package:desafio_do_layout/widgets/textos.dart';
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
@@ -185,10 +186,13 @@ class _ExpandingActionButton extends StatelessWidget {
 
 @immutable
 class ActionButton extends StatelessWidget {
+  final String texto;
+
   const ActionButton({
     super.key,
     this.onPressed,
     required this.icon,
+    required this.texto,
   });
 
   final VoidCallback? onPressed;
@@ -197,16 +201,22 @@ class ActionButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context).colorScheme.tertiary;
-    return Material(
-      shape: const CircleBorder(),
-      clipBehavior: Clip.antiAlias,
-      color: theme,
-      elevation: 4.0,
-      child: IconButton(
-        onPressed: onPressed,
-        icon: icon,
-        color: Theme.of(context).scaffoldBackgroundColor,
-      ),
+    
+    return Column(
+      children: [
+        Material(
+          shape: const CircleBorder(),
+          clipBehavior: Clip.antiAlias,
+          color: theme,
+          elevation: 4.0,
+          child: IconButton(
+            onPressed: onPressed,
+            icon: icon,
+            color: Theme.of(context).scaffoldBackgroundColor,
+          ),
+        ),
+        Textos(texto: texto, tamanho: 14.0, cor: Theme.of(context).colorScheme.tertiary),
+      ],
     );
   }
 }
