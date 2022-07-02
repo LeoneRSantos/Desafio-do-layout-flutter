@@ -24,6 +24,7 @@ class PrimeiraLinha extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.end,
 
             children: [
+              IconButton(icon: Icon(Icons.light_mode, size: 30.0, color: Theme.of(context).colorScheme.primary,), onPressed: alterar,),
 
               Textos(texto: 'Olá', tamanho: 16.0, cor: Theme.of(context).colorScheme.secondary),
 
