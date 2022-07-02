@@ -75,8 +75,8 @@ class _ExpandableFabState extends State<ExpandableFab>
 
   Widget _buildTapToCloseFab() {
     return SizedBox(
-      width: 56.0,
-      height: 56.0,
+      width: 50.0,
+      height: 50.0,
       child: Center(
         child: Material(
           color: Theme.of(context).colorScheme.primary,
