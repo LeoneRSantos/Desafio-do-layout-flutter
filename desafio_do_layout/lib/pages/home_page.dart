@@ -8,6 +8,8 @@ import 'package:desafio_do_layout/widgets/terceira_linha.dart';
 import 'package:desafio_do_layout/widgets/textos.dart';
 import 'package:flutter/material.dart';
 
+import '../widgets/cartao_bottom_bar.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -155,10 +157,10 @@ class _HomePageState extends State<HomePage> {
       hasInk: true, //new, gives a cute ink effect
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       items: <BubbleBottomBarItem>[
-          BubbleBottomBarItem(backgroundColor: corPrincipal, icon: Icon(Icons.home, color: corTerciaria,), activeIcon: Icon(Icons.home, color: corPreenchimento), title: Textos(texto: 'Home', tamanho: 14.0, cor: corPreenchimento)),
-          BubbleBottomBarItem(backgroundColor: corPrincipal, icon: Icon(Icons.shop_2, color: corTerciaria,), activeIcon: Icon(Icons.shop_2, color: corPreenchimento), title: Textos(texto: 'Pedidos', tamanho: 14.0, cor: corPreenchimento)),
-          BubbleBottomBarItem(backgroundColor: corPrincipal, icon: Icon(Icons.people, color: corTerciaria,), activeIcon: Icon(Icons.people, color: corPreenchimento,), title: Textos(texto: 'Clientes', tamanho: 14.0, cor: corPreenchimento)),
-          BubbleBottomBarItem(backgroundColor: corPrincipal, icon: Icon(Icons.show_chart, color: corTerciaria,), activeIcon: Icon(Icons.show_chart, color: corPreenchimento,), title: Textos(texto: 'Estatísticas', tamanho: 14.0, cor: corPreenchimento)),
+          BubbleBottomBarItem(backgroundColor: corPrincipal, icon: CartaoBottomBar(conteudo: Icon(Icons.home, color: corPreenchimento,)), activeIcon: Icon(Icons.home, color: corPreenchimento), title: Textos(texto: 'Home', tamanho: 14.0, cor: corPreenchimento)),
+          BubbleBottomBarItem(backgroundColor: corPrincipal, icon: CartaoBottomBar(conteudo: Icon(Icons.shop_2, color: corPreenchimento,)), activeIcon: Icon(Icons.shop_2, color: corPreenchimento), title: Textos(texto: 'Pedidos', tamanho: 14.0, cor: corPreenchimento)),
+          BubbleBottomBarItem(backgroundColor: corPrincipal, icon: CartaoBottomBar(conteudo: Icon(Icons.people, color: corPreenchimento,)), activeIcon: Icon(Icons.people, color: corPreenchimento,), title: Textos(texto: 'Clientes', tamanho: 14.0, cor: corPreenchimento)),
+          BubbleBottomBarItem(backgroundColor: corPrincipal, icon: CartaoBottomBar(conteudo: Icon(Icons.show_chart, color: corPreenchimento,)), activeIcon: Icon(Icons.show_chart, color: corPreenchimento,), title: Textos(texto: 'Estatísticas', tamanho: 14.0, cor: corPreenchimento)),
       ],
       
       
