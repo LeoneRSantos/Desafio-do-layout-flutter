@@ -4,10 +4,11 @@ import 'package:flutter/material.dart';
 import '../cores.dart';
 
 class PrimeiraLinha extends StatelessWidget {
-  PrimeiraLinha({Key? key, required this.alterar}) : super(key: key);
+  PrimeiraLinha({Key? key, required this.alterar, required this.iconeTema}) : super(key: key);
 
   late Cores c = Cores();
   final void Function() alterar;
+  final IconData iconeTema;
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +27,7 @@ class PrimeiraLinha extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.end,
 
             children: [
-              IconButton(icon: Icon(Icons.light_mode, size: 30.0, color: Theme.of(context).colorScheme.primary,), onPressed: alterar,),
+              IconButton(icon: Icon(iconeTema, size: 30.0, color: Theme.of(context).colorScheme.primary,), onPressed: alterar,),
 
               Textos(texto: 'Olá', tamanho: 16.0, cor: Theme.of(context).colorScheme.secondary),
 
