@@ -93,7 +93,7 @@ class _HomePageState extends State<HomePage> {
           
             // Primeira linha
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 20.0),
+              padding: const EdgeInsets.symmetric(vertical: 10.0),
               child: PrimeiraLinha(),
             ),
           
