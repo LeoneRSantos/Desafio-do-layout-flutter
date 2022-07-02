@@ -4,9 +4,10 @@ import 'package:flutter/material.dart';
 import '../cores.dart';
 
 class PrimeiraLinha extends StatelessWidget {
-  PrimeiraLinha({Key? key}) : super(key: key);
+  PrimeiraLinha({Key? key, required this.alterar}) : super(key: key);
 
   late Cores c = Cores();
+  final void Function() alterar;
 
   @override
   Widget build(BuildContext context) {
@@ -14,9 +15,10 @@ class PrimeiraLinha extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 
       children: [
+        
         const CircleAvatar(
           backgroundImage:AssetImage('images/Perfil2.jpg'),
-          radius: 50.0,
+          radius: 60.0,
         ),
 
         
