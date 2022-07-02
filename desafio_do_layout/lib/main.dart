@@ -6,20 +6,41 @@ void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   MyApp({Key? key}) : super(key: key);
 
-  late ThemeData tema;
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
 
-  ThemeData definirTema(){
+class _MyAppState extends State<MyApp> {
+ late ThemeData tema = temaEscuro;
+  
 
-    tema = temaClaro;
+ ThemeData definirTema(){
+
+    return tema;
+  }
+
+  void selecionarTema(){
 
     if (tema.colorScheme.brightness == Brightness.dark) {
-      return temaEscuro;
+      setState(() {
+      Icon(Icons.light_mode);
+      tema = temaClaro;
+        debugPrint('Tema Claro');
+      });
+      
     }
 
-    return temaClaro;
+    else if (tema.colorScheme.brightness == Brightness.light){
+      setState(() {
+      Icon(Icons.dark_mode); 
+      tema = temaEscuro;
+      debugPrint('Tema escuro');
+      });
+     
+    }
   }
 
   ThemeData temaEscuro = ThemeData(
@@ -50,16 +71,13 @@ class MyApp extends StatelessWidget {
     tertiary: const Color(0xFF4f426f)),
       );
 
-
-
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: definirTema(),
       
-      home: const HomePage(),
+      home: HomePage(alterarTema: selecionarTema,),
       );
   }
 }
