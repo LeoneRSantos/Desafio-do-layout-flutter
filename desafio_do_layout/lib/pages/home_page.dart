@@ -115,7 +115,7 @@ class _HomePageState extends State<HomePage> {
             // Quarta linha
             CartaoPadrao(conteudo: QuartaLinha(valor: _novosPedidos,)),
 
-            Expanded(child: Container()),
+            const Spacer(),
           
           ],
         ),
