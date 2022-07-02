@@ -11,7 +11,9 @@ import 'package:flutter/material.dart';
 import '../widgets/cartao_bottom_bar.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({Key? key, required this.alterarTema}) : super(key: key);
+
+  final void Function() alterarTema;
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -94,7 +96,7 @@ class _HomePageState extends State<HomePage> {
             // Primeira linha
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 10.0),
-              child: PrimeiraLinha(),
+              child: PrimeiraLinha(alterar: widget.alterarTema,),
             ),
           
             // Segunda linha
