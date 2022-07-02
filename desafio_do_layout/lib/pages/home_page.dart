@@ -100,7 +100,6 @@ class _HomePageState extends State<HomePage> {
             CartaoPadrao(conteudo: QuartaLinha(valor: _novosPedidos,)),
 
             Expanded(child: Container()),
-            Expanded(child: Container(),)
           
           ],
         ),

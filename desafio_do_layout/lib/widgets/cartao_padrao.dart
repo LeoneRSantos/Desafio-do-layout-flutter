@@ -7,7 +7,8 @@ class CartaoPadrao extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(child: Padding(
+    return Expanded(flex: 1,
+      child: Padding(
       padding: const EdgeInsets.all(10.0),
       child: Container(  
         decoration: BoxDecoration(borderRadius: BorderRadius.circular(20.0), color: Theme.of(context).colorScheme.surface,),
