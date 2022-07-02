@@ -99,26 +99,29 @@ class _HomePageState extends State<HomePage> {
             // Quarta linha
             CartaoPadrao(conteudo: QuartaLinha(valor: _novosPedidos,)),
 
-            Expanded(child: Container(height: 110.0,)),
+            Expanded(child: Container()),
+            Expanded(child: Container(),)
           
           ],
         ),
       ),
       
       floatingActionButton: ExpandableFab(
-      distance: 112.0,
+      distance: 100.0,
       children: [
         ActionButton(
+          texto: 'representantes',
           onPressed: () => _showAction(context, 0),
           icon: const Icon(Icons.person_add),
         ),
         ActionButton(
+          texto: 'pedidos',
           onPressed: () => _showAction(context, 1),
           icon: const Icon(Icons.add_shopping_cart),
         ),
         ActionButton(
           onPressed: () => _showAction(context, 2),
-          icon: const Icon(Icons.person_add),
+          icon: const Icon(Icons.person_add), texto: 'clientes',
         ),
       ],
     ),        
