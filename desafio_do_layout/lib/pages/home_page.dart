@@ -24,16 +24,32 @@ class _HomePageState extends State<HomePage> {
   String _novosPedidos = '34.000,00';
   IconData _visibilidade = Icons.visibility;
 
-  void esconder(){
-    setState(() {
-      _pedidos = '*';
-      _clientes = '*';
-      _cidades = '*';
-      _novosPedidos = '_, __';
-      _visibilidade = Icons.visibility_off;
-    
-    });
-    debugPrint('Função esconder');
+  void controlarExibicao(){
+
+    if (_pedidos == '12') {
+      setState(() {
+        _pedidos = '*';
+        _clientes = '*';
+        _cidades = '*';
+        _novosPedidos = '_, __';
+        _visibilidade = Icons.visibility_off;
+      
+      });
+      debugPrint('Função manipular: valores escondidos.');
+      
+    }
+    else{
+      setState(() {
+        _pedidos = '12';
+        _clientes = '20';
+        _cidades = '20';
+        _novosPedidos = '34.000,00';
+        _visibilidade = Icons.visibility;
+      
+      });
+      debugPrint('Função manipular: valores mostrados.');
+
+    }
   }
 
   
@@ -80,7 +96,7 @@ class _HomePageState extends State<HomePage> {
             ),
           
             // Segunda linha
-            SegundaLinha(alterarValores: esconder, icone: _visibilidade,),
+            SegundaLinha(alterarValores: controlarExibicao, icone: _visibilidade,),
           
                 
             // Linha com pedidos, clientes e cidades

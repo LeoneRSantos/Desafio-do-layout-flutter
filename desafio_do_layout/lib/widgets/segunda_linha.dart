@@ -19,7 +19,7 @@ class _SegundaLinhaState extends State<SegundaLinha> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
 
       children: [
         Textos(texto: 'Parabéns! Esse mês você fez', tamanho: 16.0, cor: Theme.of(context).colorScheme.secondary),
