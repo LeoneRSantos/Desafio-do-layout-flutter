@@ -1,6 +1,3 @@
-import 'dart:ui';
-
-import 'package:desafio_do_layout/cores.dart';
 import 'package:desafio_do_layout/widgets/textos.dart';
 import 'package:flutter/material.dart';
 
@@ -8,7 +5,7 @@ class QuartaLinha extends StatelessWidget {
   QuartaLinha({Key? key, required this.valor}) : super(key: key);
 
   final String valor;
-  late Cores c = Cores();
+
 
   @override
   Widget build(BuildContext context) {

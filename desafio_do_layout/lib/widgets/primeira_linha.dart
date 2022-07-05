@@ -1,12 +1,10 @@
 import 'package:desafio_do_layout/widgets/textos.dart';
 import 'package:flutter/material.dart';
 
-import '../cores.dart';
 
 class PrimeiraLinha extends StatelessWidget {
   PrimeiraLinha({Key? key, required this.alterar, required this.iconeTema}) : super(key: key);
 
-  late Cores c = Cores();
   final void Function() alterar;
   final IconData iconeTema;
 

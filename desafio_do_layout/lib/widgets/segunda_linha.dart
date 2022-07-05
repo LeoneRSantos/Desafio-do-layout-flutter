@@ -1,4 +1,3 @@
-import 'package:desafio_do_layout/cores.dart';
 import 'package:desafio_do_layout/widgets/textos.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +13,6 @@ class SegundaLinha extends StatefulWidget {
 }
 
 class _SegundaLinhaState extends State<SegundaLinha> {
- late Cores c =Cores();
 
   @override
   Widget build(BuildContext context) {
